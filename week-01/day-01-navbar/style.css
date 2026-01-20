@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: antiquewhite;
+}
+img {
+  width: 100px;
+  border-radius: 100px;
+  padding: 10px;
+}
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #383838;
+}
+.line {
+  padding: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+.humb{
+    display: none;
+    
+}
+img:hover{
+    width: 110px;
+}
+li:hover{
+    font-size: 1.5rem;
+    color: aqua;
+}
+
+@media (max-width: 768px) {
+    ul{
+        display: none;
+    }
+    .humb{
+    display: inline;
+    border-radius: 100%;
+    padding: 10px;
+}
+}
+
+/* 1. Logo on the left (can be text "LOGO")
+2. Menu items: Home, About, Services, Contact (center or right)
+3. Must be responsive:
+   - Desktop: Horizontal menu
+   - Mobile (<768px): Hamburger menu (if you can, else just stacked vertical)
+4. Hover effects on menu items
+5. Sticky navbar (stays at top when scrolling) */
