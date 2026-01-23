@@ -1,0 +1,110 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: antiquewhite;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top-color: #00bcd4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+  height: 40px;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 100%;
+  animation: bounce 1s linear infinite;
+}
+.dots :nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dots :nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.progress-bar {
+  width: 400px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #00bcd4;
+  border-radius: inherit;
+  animation: load 3s ease infinite;
+}
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+.pulse {
+  width: 5rem;
+  height: 5rem;
+  background-color: #2080c9;
+  border-radius: 100%;
+  animation: pluse 2s linear infinite;
+}
+@keyframes pluse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
