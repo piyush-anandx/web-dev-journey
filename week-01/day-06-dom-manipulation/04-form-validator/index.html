@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #1a1a1a;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .container {
+        background: white;
+        border-radius: 15px;
+        padding: 40px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+        font-weight: 500;
+      }
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+      input:focus {
+        outline: none;
+        border-color: #3b82f6;
+      }
+      input.error {
+        border-color: #ef4444;
+      }
+      input.success {
+        border-color: #10b981;
+      }
+      .error-message {
+        color: #ef4444;
+        font-size: 14px;
+        margin-top: 5px;
+        display: none;
+      }
+      .error-message.show {
+        display: block;
+      }
+      button {
+        width: 100%;
+        padding: 15px;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #2563eb;
+      }
+      .success-message {
+        background: #10b981;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 20px;
+        display: none;
+      }
+      .success-message.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration Form</h1>
+
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" />
+          <div class="error-message" id="usernameError">
+            Username must be 3-15 characters
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter email" />
+          <div class="error-message" id="emailError">
+            Please enter a valid email
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <div class="error-message" id="passwordError">
+            Password must be at least 8 characters
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm password"
+          />
+          <div class="error-message" id="confirmError">
+            Passwords do not match
+          </div>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="success-message" id="successMessage">
+        ✓ Registration Successful!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

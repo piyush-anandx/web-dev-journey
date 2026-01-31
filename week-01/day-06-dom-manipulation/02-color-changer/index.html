@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+    #red { background: #ef4444; color: white; }
+    #blue { background: #3b82f6; color: white; }
+    #green { background: #10b981; color: white; }
+    #random { background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); color: white; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Background Color Changer</h1>
+  
+  <div class="buttons">
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="green">Green</button>
+    <button id="random">Random</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
